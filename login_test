@@ -1,5 +1,5 @@
 //Test Case to Check Login Success
-String userName = "shishir13";
+    String userName = "jamil";
     String password = "password";
 
     onView(withId(R.id.userNameEt))
