@@ -1,0 +1,17 @@
+//Test Case for User Signup
+    String userName = "jamil";
+    String userEmail = "jamil138.amin@gamil.com"
+    String password = "password";
+    String confirmPassword = "password";      
+    onView(withId(R.id.userNameEt))
+         .perform(typeText(userName),closeSoftKeyboard());
+    onView(withId(R.id.userEmailEt))
+         .perform(typeText(userEmail),closeSoftKeyboard());
+    onView(withId(R.id.passwordEt))
+         .perform(typeText(password),closeSoftKeyboard());
+    onView(withId(R.id.passwordEt))
+        .perform(typeText(confirmPassword),closeSoftKeyboard());
+    onView(withId(R.id.signUpButton))
+          .perform(click());
+    onView(withId(R.id.sign_up_success_tv))
+         .check(matches(withText("signup_success")));
