@@ -1,0 +1,14 @@
+//Test Case to Check Login Success
+String userName = "shishir13";
+    String password = "password";
+
+    onView(withId(R.id.userNameEt))
+         .perform(typeText(password),closeSoftKeyboard());
+
+    onView(withId(R.id.passwordEt))
+         .perform(typeText(password),closeSoftKeyboard());
+
+    onView(withId(R.id.loginButton))
+         .perform(click());
+   onView(withId(R.id.login_success_tv))
+         .check(matches(withText("login_success")));
